@@ -16,7 +16,9 @@
  */
 
 #include "LicenseManager.h"
+#include <QSynergyApplication.h>
 #include "AppConfig.h"
+
 #include <ctime>
 #include <stdexcept>
 #include <utility>
@@ -134,7 +136,7 @@ void LicenseManager::skipActivation()
 QString
 LicenseManager::getEditionName(Edition const edition, bool trial)
 {
-	std::string name ("Synergy");
+    std::string name(QSynergyApplication::name().toStdString());
 	switch (edition) {
 		case kUnregistered:
 			name += " (UNREGISTERED)";
