@@ -31,6 +31,10 @@ if (NOT CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_definitions (-DNDEBUG)
 endif()
 
+if (PRODUCT_TYPE STREQUAL "Community")
+    message("Product type: Community")
+endif()
+
 #
 # Synergy version
 #
