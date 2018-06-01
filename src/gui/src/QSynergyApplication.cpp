@@ -22,6 +22,12 @@
 #include <QtCore>
 #include <QtGui>
 
+#ifdef SYNERGY_CONSUMER
+    static const char* s_name = "Synergy";
+#else
+    static const char* s_name = "Synergy 1 Enterprise";
+#endif
+
 QSynergyApplication* QSynergyApplication::s_Instance = NULL;
 
 QSynergyApplication::QSynergyApplication(int& argc, char** argv) :
@@ -49,6 +55,11 @@ void QSynergyApplication::commitData(QSessionManager&)
 QSynergyApplication* QSynergyApplication::getInstance()
 {
     return s_Instance;
+}
+
+QString QSynergyApplication::name()
+{
+    return s_name;
 }
 
 void QSynergyApplication::switchTranslator(QString lang)

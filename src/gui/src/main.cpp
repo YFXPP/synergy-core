@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
 #endif
 	QCoreApplication::setOrganizationName("Synergy");
 	QCoreApplication::setOrganizationDomain("http://symless.com/");
-	QCoreApplication::setApplicationName("Synergy");
+    QCoreApplication::setApplicationName(QSynergyApplication::name());
 
 	QSynergyApplication app(argc, argv);
 

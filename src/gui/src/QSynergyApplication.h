@@ -36,6 +36,7 @@ class QSynergyApplication : public QApplication
         void setTranslator(QTranslator* translator);
 
         static QSynergyApplication* getInstance();
+        static QString name();
 
     private:
         QTranslator* m_Translator;
@@ -44,4 +45,3 @@ class QSynergyApplication : public QApplication
 };
 
 #endif
-

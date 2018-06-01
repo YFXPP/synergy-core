@@ -31,8 +31,8 @@ if (NOT CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_definitions (-DNDEBUG)
 endif()
 
-if (PRODUCT_TYPE STREQUAL "Community")
-    message("Product type: Community")
+if (PRODUCT_TYPE STREQUAL "Consumer")
+    set (SYNERGY_CONSUMER 1)
 endif()
 
 #
