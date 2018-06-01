@@ -277,6 +277,7 @@ elseif (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
         /D_WINDOWS
         /D_CRT_SECURE_NO_WARNINGS
         /DSYNERGY_VERSION=\"${SYNERGY_VERSION}\"
+        /DSYNERGY_CONSUMER=\"${SYNERGY_CONSUMER}\"
         /D_XKEYCHECK_H
     )
 endif()
